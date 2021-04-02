@@ -8,7 +8,7 @@ benchmark() {
     done
 }
 
-echo '|language|time|' > _report
+echo '|language|time (in s)|' > _report
 echo '|-|-|' >> _report
 benchmark | sort -n -k 3 >> _data
 paste -d '|' <(cut -d ' ' -f 1 < _data) <(cut -d ' ' -f 2 < _data) >> _report
