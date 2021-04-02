@@ -11,7 +11,7 @@ Return a list of all prime numbers less than 100,000.
 
 ## The Data
 
-c 0.008069
-
-python 0.09863162040710449
-
+|language|time|
+|-|-|
+c|0.008425
+python|0.11713838577270508
