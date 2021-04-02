@@ -1,7 +1,8 @@
 #include <time.h>
+#include <stdio.h>
 #include "sieve.h"
 
-void sieve_of_erathosthenes(int results[NUM_PRIMES])
+void sieve_of_eratosthenes(int results[NUM_PRIMES])
 {
     for (int i = 0; i < NUM_PRIMES; i++) {
         results[i] = 0;
@@ -19,7 +20,7 @@ int main(void)
     sieve_of_eratosthenes(results);
     end = clock();
 
-    printf("%.3f\n", ((double)t / CLOCKS_PER_SEC));
+    printf("%lf\n", (double)(end - start) / CLOCKS_PER_SEC);
 
     return 0;
 }

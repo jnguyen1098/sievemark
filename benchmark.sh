@@ -1,3 +1,7 @@
 #!/usr/bin/env sh
 
-echo "Hello world"
+for folder in */; do
+    cd "$folder"
+    printf "$(echo "$folder" | sed 's/.$//'): $(./run.sh)"
+    cd ..
+done
