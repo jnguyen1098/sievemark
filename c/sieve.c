@@ -1,5 +1,6 @@
 #include <time.h>
 #include <stdio.h>
+#include <assert.h>
 #include "sieve.h"
 
 void sieve_of_eratosthenes(int results[NUM_PRIMES])
@@ -19,6 +20,10 @@ int main(void)
     start = clock();
     sieve_of_eratosthenes(results);
     end = clock();
+
+    for (int i = 0; i < NUM_PRIMES; i++) {
+        assert(primes[i] == results[i]);
+    }
 
     printf("%lf\n", (double)(end - start) / CLOCKS_PER_SEC);
 
