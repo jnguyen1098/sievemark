@@ -5,6 +5,7 @@
 
 void sieve_of_eratosthenes(int results[NUM_PRIMES])
 {
+    int n = 0;
     for (int i = 0; i < NUM_PRIMES; i++) {
         results[i] = 0;
     }
