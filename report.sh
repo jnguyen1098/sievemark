@@ -3,17 +3,16 @@
 benchmark() {
     for folder in */; do
         cd "$folder"
-        printf "$(echo "$folder" | sed 's/.$//') $(./run.sh)\n"
+        printf "%s\n" "$(echo "$folder" | sed 's/.$//') $(./run.sh)"
         cd ..
     done
 }
 
-#!/usr/bin/env sh
-
-echo '|language|time|' > _uhh
-echo '|-|-|' >> _uhh
+echo '|language|time|' > _report
+echo '|-|-|' >> _report
 benchmark | sort -n -k 3 >> _data
-paste -d '|' <(cut -d ' ' -f 1 < _data) <(cut -d ' ' -f 2 < _data) >> _uhh
-cat _README.md _uhh > README.md
+paste -d '|' <(cut -d ' ' -f 1 < _data) <(cut -d ' ' -f 2 < _data) >> _report
+cat _README.md _report > README.md
 rm -rf _data
+rm -rf _report
 cat README.md
