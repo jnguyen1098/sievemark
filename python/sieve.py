@@ -28,4 +28,4 @@ for i in range(len(sieve_assert.expected_results)):
         print(f"Expected {sieve_assert.expected_results[i]} but got {results[i]}")
 """
 
-print(f"{end - start}")
+print('{:.6f}%'.format(end - start))

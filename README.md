@@ -13,5 +13,5 @@ Return a list of all prime numbers less than 100,000.
 
 |language|time|
 |-|-|
-c|0.008425
-python|0.11713838577270508
+c|0.009343
+python|0.107028
