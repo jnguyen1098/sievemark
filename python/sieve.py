@@ -22,10 +22,10 @@ start = time.time()
 sieve(results)
 end = time.time()
 
-"""
 for i in range(len(sieve_assert.expected_results)):
     if results[i] != sieve_assert.expected_results[i]:
-        print(f"Expected {sieve_assert.expected_results[i]} but got {results[i]}")
-"""
+        print("Fail")
+        exit(0)
+        # print(f"Expected {sieve_assert.expected_results[i]} but got {results[i]}")
 
 print('{:.6f}%'.format(end - start))

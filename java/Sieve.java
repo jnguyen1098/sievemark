@@ -38,7 +38,10 @@ public class Sieve {
         }
 
         for (int i = 0; i < NUM_PRIMES; i++) {
-            assert primes[i] == results[i];
+            if (primes[i] != results[i]) {
+                System.out.println("Fail");
+                System.exit(0);
+            }
         }
 
         double endTime = System.nanoTime();
